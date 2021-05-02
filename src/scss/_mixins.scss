@@ -1,0 +1,57 @@
+@mixin heading-text($size: 2.5) {
+    font-family: var(--heading-text);
+    color: var(--heading-text-color);
+    text-transform: uppercase;
+    font-size: $size + em;
+}
+
+@mixin wrapper {
+    width: 80%;
+    margin: 0 auto;
+
+    @media screen and (max-width: 500px) {
+        width: 90%;
+    }
+}
+
+@mixin link-underline {
+position: relative;
+
+&:before{
+  content: '';
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  width: 0;
+  height: 3px;
+  background-color: var(--red);
+  transition: width 0.6s cubic-bezier(0.25, 1, 0.5, 1);
+}
+
+@media (hover: hover) and (pointer: fine) {
+  &:hover::before{
+    left: 0;
+    right: auto;
+    width: 100%;
+  }
+}
+}
+
+// WIP effect
+@mixin hover-highlight {
+    &:after{
+        content: "";
+        background: white;
+          mix-blend-mode: exclusion;
+        width: calc(100% + 20px);
+        height: 0;
+        position: absolute;
+        bottom: -4px;
+        left: -10px;
+          transition: all .3s cubic-bezier(0.445, 0.05, 0.55, 0.95);
+      }
+      
+      &:hover::after{
+          height: calc(100% + 8px)
+      }
+}

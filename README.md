@@ -1,4 +1,4 @@
-# wctc-portfolio
+# WCTC Portfolio
 
 ## Project setup
 ```
