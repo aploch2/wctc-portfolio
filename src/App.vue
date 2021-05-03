@@ -28,6 +28,11 @@ export default {
   --body-text-color: var(--white);
   --heading-text-color: var(--white);
 
+  --VueJS: #42b883;
+  --MongoDB: #4db33d;
+  --Docker: #0db7ed;
+  --WordPress: #0073aa;
+
   // fonts
   --heading-text: 'Roboto Mono', sans-serif;
   -webkit-font-smoothing: antialiased;

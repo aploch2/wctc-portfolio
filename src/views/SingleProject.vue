@@ -1,0 +1,86 @@
+<template>
+    <div>
+        <img :src="image" :alt="imageAlt">
+        <p class="mid-light-heading">Technologies Used:</p>
+        <div class="technologies">
+            <p v-for="item in tech" :key="item.name" :class="item">{{ item }}</p>
+        </div>
+        <div class="project-body">
+        <h1>{{ title }}</h1>
+        <!-- <p>The Project ID is: {{ id }}</p> -->
+        <p>{{ year }}</p>
+        <p>{{ description }}</p>
+        <a :href="link" target="_blank">Project Link</a>
+        </div>
+        
+    </div>
+</template>
+
+<script>
+export default {
+    props: ['id',
+            'title',
+            'image',
+            'imageAlt',
+            'year',
+            'link',
+            'description',
+            'tech'],
+    // data() {
+    //     return {
+    //         projectId: this.$route.params.id
+    //     }
+    // },
+    setup () {
+        // console.log($route.params);
+
+        return {
+           
+        }
+    }
+}
+</script>
+
+<style lang="scss" scoped>
+.project-body {
+    @include wrapper;
+}
+.mid-light-heading {
+    color: var(--gray);
+    text-align: center;
+    // font-size: 0.8em;
+    margin-bottom: 0px;
+}
+.technologies {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    p {
+        padding: 0.5em 1em;
+        border: 2px solid var(--white);
+        border-radius: 2px;
+        margin-right: 1em;
+
+        &:last-child {
+            margin-right: 0px;
+        }
+    }
+    .VueJS {
+        color: var(--VueJS);
+        border-color: var(--VueJS);
+    }
+    .Docker {
+        color: var(--Docker);
+        border-color: var(--Docker);
+    }
+    .MongoDB {
+        color: var(--MongoDB);
+        border-color: var(--MongoDB);
+    }
+    .WordPress {
+        color: var(--WordPress);
+        border-color: var(--WordPress);
+    }
+}
+</style>
