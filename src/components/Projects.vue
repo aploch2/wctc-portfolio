@@ -14,37 +14,37 @@
         </div>
     </div> -->
     <Project 
-        title="Self Hosted Project Manager"
+        :title="projects[0].title"
         year="2020"
-        image="https://austinploch.com/images/self-hosted-project-manager.png"
+        image="https://austinploch.com/images/self-hosted-project-manager.jpg"
         imageAlt="Image for the Self Hosted Project Manager. "
         link="/portfolio/self-hosted-project-manager"
     />
     <Project 
         title="Magic Tree House Books"
         year="2019"
-        image="https://austinploch.com/images/self-hosted-project-manager.png"
+        image="https://austinploch.com/images/magic-tree-house-books.jpg"
         imageAlt="Image of home page for Magic Tree House Books. "
         link="/portfolio/magic-tree-house-books"
     />
     <Project 
         title="2018 Portfolio"
         year="2018"
-        image="https://austinploch.com/images/self-hosted-project-manager.png"
+        image="https://austinploch.com/images/2018-portfolio.jpg"
         imageAlt="Image for the 2018 Portfolio. "
         link="/portfolio/2018-portfolio"
     />
     <Project 
         title="The Invention Group"
         year="2021"
-        image="https://austinploch.com/images/self-hosted-project-manager.png"
+        image="https://austinploch.com/images/the-invention-group.jpg"
         imageAlt="Image for The Invention Group. "
         link="/portfolio/the-invention-group"
     />
     <Project 
         title="Summerfield United Methodist Church"
         year="2021"
-        image="https://austinploch.com/images/self-hosted-project-manager.png"
+        image="https://austinploch.com/images/summerfield-church.jpg"
         imageAlt="Image for the Summerfield United Methodist Church. "
         link="/portfolio/summerfield-church"
     />
