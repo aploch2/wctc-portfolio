@@ -1,12 +1,12 @@
 <template>
   <nav>
       <span>
-      <router-link to="/">Home</router-link>
+      <router-link to="/">home</router-link>
       <!-- <router-link to="/">About</router-link> -->
       </span>
       <img src="../assets/logo.png" alt="Austin Ploch's logo. ">
       <span>
-      <router-link to="/portfolio">Portfolio</router-link>
+      <router-link to="/portfolio">portfolio</router-link>
       <!-- <router-link to="Portfolio">Contact</router-link> -->
       </span>
   </nav>

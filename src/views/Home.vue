@@ -16,7 +16,9 @@ export default {
 </script>
 
 <style lang="scss">
+.home {
   p {
-    @include wrapper;
-  }
+      @include wrapper;
+    }
+}
 </style>

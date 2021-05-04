@@ -21,7 +21,8 @@ export default {
         'year',
         'image',
         'imageAlt',
-        'link'
+        'link',
+        'description'
     ],
     setup () {
         

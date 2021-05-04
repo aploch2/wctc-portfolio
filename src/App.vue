@@ -1,15 +1,18 @@
 <template>
   <Navbar/>
   <router-view />
+  <Footer />
 </template>
 
 <script>
 
 import Navbar from '@/components/Navbar.vue';
+import Footer from '@/components/Footer.vue';
 
 export default {
   components: {
     Navbar,
+    Footer,
   }
 }
 </script>
@@ -45,7 +48,7 @@ export default {
 
 body {
   margin: 0px; // fixes initial body margin
-  background-color: rgb(34, 34, 34);
+  background-color: rgb(15, 15, 15);
 }
 
 #app {
@@ -60,8 +63,10 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
+    margin-top: 1em;
+    margin-bottom: 50px;
 
-    p {
+    span {
         display: inline-block;
         padding: 0.5em 1em;
         border: 2px solid var(--white);
@@ -89,6 +94,20 @@ body {
       border-color: var(--WordPress);
     }
 }
+.button {
+    text-decoration: none;
+    color: var(--black);
+    padding: 0.5em 1em;
+    background-color: var(--white);
+    border: 2px solid var(--white);
+    border-radius: 2px;
+    transition: 0.2s ease-in-out;
 
+    &:hover {
+        background-color: transparent;
+        color: var(--white);
+        transition: 0.2s ease-in-out;
+    }
+}
 
 </style>

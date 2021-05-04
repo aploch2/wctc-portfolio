@@ -43,13 +43,13 @@ const routes = [
     component: () =>
       import("../views/SummerfieldChurch.vue"),
   },
-  {
-    path: "/project/:id",
-    name: "Project",
-    component: () =>
-      import("../views/SingleProject.vue"),
-    props: true,
-},
+  // {
+  //   path: "/project/:id",
+  //   name: "Project",
+  //   component: () =>
+  //     import("../views/SingleProject.vue"),
+  //   props: true,
+  // },
 ];
 
 
