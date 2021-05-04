@@ -1,6 +1,6 @@
 <template>
 <div class="projects">
-    <div class="project" v-for="project in projects" :key="project.id">
+    <!-- <div class="project" v-for="project in projects" :key="project.id">
         <div class="project-image-container">
         <img class="project-image" :src="project.image" :alt="project.imageAlt">            
         </div>
@@ -12,19 +12,119 @@
             </h2>
             <p>{{ project.year }}</p>
         </div>
+    </div> -->
+    <Project 
+        title="Self Hosted Project Manager"
+        year="2020"
+        image="https://austinploch.com/images/self-hosted-project-manager.png"
+        imageAlt="Image for the Self Hosted Project Manager. "
+        link="/portfolio/self-hosted-project-manager"
+    />
+    <Project 
+        title="Magic Tree House Books"
+        year="2019"
+        image="https://austinploch.com/images/self-hosted-project-manager.png"
+        imageAlt="Image of home page for Magic Tree House Books. "
+        link="/portfolio/magic-tree-house-books"
+    />
+    <Project 
+        title="2018 Portfolio"
+        year="2018"
+        image="https://austinploch.com/images/self-hosted-project-manager.png"
+        imageAlt="Image for the 2018 Portfolio. "
+        link="/portfolio/2018-portfolio"
+    />
+    <Project 
+        title="The Invention Group"
+        year="2021"
+        image="https://austinploch.com/images/self-hosted-project-manager.png"
+        imageAlt="Image for The Invention Group. "
+        link="/portfolio/the-invention-group"
+    />
+    <Project 
+        title="Summerfield United Methodist Church"
+        year="2021"
+        image="https://austinploch.com/images/self-hosted-project-manager.png"
+        imageAlt="Image for the Summerfield United Methodist Church. "
+        link="/portfolio/summerfield-church"
+    />
+    <!-- <div class="project" id="project-project-manager">
+        <div class="project-image-container">
+        <img class="project-image" src="@/assets/logo.png" alt="Image for the Self Hosted Project Manager. ">            
+        </div>
+        <div class="project-info">
+            <h2>
+                <router-link to="/portfolio/self-hosted-project-manager">
+                    Self Hosted Project Manager
+                </router-link>
+            </h2>
+            <p>2020</p>
+        </div>
     </div>
+    <div class="project" id="project-tree-house">
+        <div class="project-image-container">
+        <img class="project-image" src="@/assets/logo-dark.png" alt="Image of home page for Magic Tree House Books. ">            
+        </div>
+        <div class="project-info">
+            <h2>
+                <router-link to="/portfolio/magic-tree-house-books">
+                    Magic Tree House Books
+                </router-link>
+            </h2>
+            <p>2019</p>
+        </div>
+    </div>
+    <div class="project" id="project-2018-portfolio">
+        <div class="project-image-container">
+        <img class="project-image" src="@/assets/logo-dark.png" alt="Image of home page for my 2018 portfolio. ">            
+        </div>
+        <div class="project-info">
+            <h2>
+                <router-link to="/portfolio/2018-portfolio">
+                    2018 Portfolio
+                </router-link>
+            </h2>
+            <p>2018</p>
+        </div>
+    </div>
+    <div class="project" id="project-invention-group">
+        <div class="project-image-container">
+        <img class="project-image" src="@/assets/logo-dark.png" alt="Image of home page for The Invention Group. ">            
+        </div>
+        <div class="project-info">
+            <h2>
+                <router-link to="/portfolio/the-invention-group">
+                    The Invention Group
+                </router-link>
+            </h2>
+            <p>2021</p>
+        </div>
+    </div>
+    <div class="project" id="project-summerfield-church">
+        <div class="project-image-container">
+        <img class="project-image" src="@/assets/logo-dark.png" alt="Image of home page for Summerfield United Methodist Church. ">            
+        </div>
+        <div class="project-info">
+            <h2>
+                <router-link to="/portfolio/summerfield-church">
+                    Summerfield United Methodist Church
+                </router-link>
+            </h2>
+            <p>2019</p>
+        </div>
+    </div> -->
 </div>
 </template>
 
 <script>
 
-// import Project from '@/components/Project.vue';
+import Project from '@/components/Project.vue';
 import ProjectImage1 from "@/assets/logo.png"
 import ProjectImage2 from "@/assets/logo-dark.png"
 
 export default {
     components: {
-        // Project,
+        Project,
     },
     data() {
         return {
@@ -34,10 +134,8 @@ export default {
             title: 'Self Hosted Project Manager', 
             image: ProjectImage1,
             imageAlt: 'Image showing the self hosted project manager. ',
-            year: '2018',
-            description: 'The Self-hosted Project Manager is a website that is self-hosted on your network that gives you a "to-do list" style of interface that allows you to manage current projects. The goal was to be able to have the user download or pull the repository from GitHub and then be able to launch the application with one command. Once you execute the command, it will launch a build a docker container that contains a MongoDB database, a custom made CRUD API built with NodeJS, for interacting with the database and a front end built in VueJS to display the content from the database. The functionality of the app is basic, but shows how you can easily launch a self-hosted app to use within your own network and not having to rely on storing your data on another server.',
-            tech: ['VueJS', 'MongoDB', 'Docker'],
-            link: 'https://github.com/aploch2/iwd-final',
+            year: '2020',
+            projectLink: '/portfolio/self-hosted-project-manager',
             },
             { 
             id: 2, 
@@ -66,52 +164,7 @@ export default {
     .projects {
         display: flex;
         justify-content: center;
+        flex-wrap: wrap;
         
-        .project {
-            width: 30%;
-            margin: 1em;
-
-            .project-image-container {
-                height: 15em;
-                overflow: hidden;
-                display: flex;
-                justify-content: center;
-
-                .project-image {
-                    max-height: 100%;
-                }
-            }
-            .project-info {
-                display: flex;
-                justify-content: space-between;
-                align-items: center;
-                padding: 1em 0;
-
-                h2, p {
-                    display: inline-block;
-                    margin: 0px;
-                    padding: 0px;
-                }
-                h2 {
-                    width: 80%;
-                    
-                    a {
-                        color: var(--heading-text-color);
-                        text-decoration: none;
-                        transition: 0.2s ease-in-out;
-
-                        &:hover {
-                            color: var(--red);
-                            transition: 0.2 ease-in-out;
-                        }
-                    }
-                    
-                }
-                p {
-                    text-align: right;
-                    width: 20%;
-                }
-            }
-        }
     }
 </style>

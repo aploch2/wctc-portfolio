@@ -6,11 +6,13 @@
             <p v-for="item in tech" :key="item.name" :class="item">{{ item }}</p>
         </div>
         <div class="project-body">
-        <h1>{{ title }}</h1>
+            <div class="project-body-header">
+                <h1>{{ title }}</h1>
+                <a class="project-link" :href="link" target="_blank">Project Link</a>
+            </div>
         <!-- <p>The Project ID is: {{ id }}</p> -->
-        <p>{{ year }}</p>
-        <p>{{ description }}</p>
-        <a :href="link" target="_blank">Project Link</a>
+            <p>{{ year }}</p>
+            <p>{{ description }}</p>
         </div>
         
     </div>
@@ -44,6 +46,12 @@ export default {
 <style lang="scss" scoped>
 .project-body {
     @include wrapper;
+
+    .project-body-header {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
 }
 .mid-light-heading {
     color: var(--gray);
@@ -57,6 +65,7 @@ export default {
     align-items: center;
 
     p {
+        display: inline-block;
         padding: 0.5em 1em;
         border: 2px solid var(--white);
         border-radius: 2px;
@@ -81,6 +90,19 @@ export default {
     .WordPress {
         color: var(--WordPress);
         border-color: var(--WordPress);
+    }
+}
+.project-link {
+    text-decoration: none;
+    color: var(--black);
+    padding: 0.5em 1em;
+    background-color: var(--white);
+    border: 2px solid var(--white);
+    border-radius: 2px;
+
+    &:hover {
+        background-color: transparent;
+        color: var(--white);
     }
 }
 </style>
