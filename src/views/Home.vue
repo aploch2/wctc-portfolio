@@ -7,7 +7,7 @@
         <h2>Front-End Developer / Web Designer</h2>
         <div class="button-group">
           <router-link class="button" to="/portfolio">View My Portfolio <font-awesome-icon :icon="['fas', 'chevron-right']" /></router-link>
-          <a href="mailto:austin@austinploch.com" class="button">Contact Me <font-awesome-icon :icon="['fas', 'envelope']" /></a>
+          <a href="mailto:austin@austinploch.com" class="button">Get In Touch <font-awesome-icon :icon="['fas', 'envelope']" /></a>
         </div>
       </div>
       <div class="austin-photo">
@@ -20,6 +20,9 @@
         
         <article class="about-text">
           <h2>// About Me</h2>
+          <p>
+            I am a Front End Web Developer and Web Designer based out of south-east Wisconsin. 
+          </p>
           <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eligendi voluptates ea modi perferendis optio dolore eaque, molestias quia neque at maiores quae nobis quibusdam deleniti ipsum sint tenetur officia voluptas expedita itaque quod nostrum! Quod, minima quos repudiandae eligendi in odit quibusdam nam unde. Debitis dolorum quasi consequatur exercitationem deleniti odio! Corporis aut laudantium modi, et beatae debitis reiciendis eum ullam tempora nam perspiciatis autem eaque atque, ea sed. Necessitatibus fugit eveniet omnis, qui perspiciatis quae, suscipit explicabo eligendi quis cum doloremque quas deserunt, neque praesentium id autem rerum beatae maxime debitis magni eos blanditiis. Numquam, unde ipsum? Inventore, nesciunt.</p>
         </article>
         <aside class="about-resume">
@@ -80,7 +83,7 @@ export default {
       width: 60%;
       position: relative;
       animation-name: page-load-slide-in-left;
-      animation-duration: 1s;
+      animation-duration: 1.5s;
       animation-delay: 0s;
       animation-timing-function: ease-in-out;
 
@@ -113,7 +116,7 @@ export default {
       position: relative;
       position: relative;
       animation-name: page-load-slide-in-right;
-      animation-duration: 1s;
+      animation-duration: 1.5s;
       animation-delay: 0s;
       animation-timing-function: ease-in-out;
 
@@ -137,7 +140,28 @@ export default {
         z-index: -1;
       }
     }
-    
+
+    @media screen and (max-width: 500px) {
+        flex-direction: column;
+        
+        .basic-about {
+          width: 90%;
+
+          .button-group {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+
+            .button {
+
+              &:first-child {
+                margin-right: 0;
+                margin-bottom: 1em;
+              }
+            }
+          }
+        }
+    }
   }
   main {
     background: var(--white);
@@ -149,7 +173,7 @@ export default {
       display: flex;
       justify-content: center;
       animation-name: page-load-fade-in;
-      animation-duration: 1s;
+      animation-duration: 2s;
       animation-delay: 0s;
       animation-timing-function: ease-in-out;
 

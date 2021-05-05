@@ -42,13 +42,7 @@ nav {
         align-items: center;
         justify-content: space-around;
     }
-    span, a, img {
-        // margin-right: 2em;
-
-        &:last-child {
-            // margin: 0px;
-        }
-    }
+    
     a {
         @include link-underline;
 
@@ -94,6 +88,12 @@ nav {
     }
     .nav-menu {
         display: none;
+    }
+
+    @media screen and (max-width: 500px) {
+        .nav-menu {
+            display: block;
+        }
     }
 }
 nav>* {

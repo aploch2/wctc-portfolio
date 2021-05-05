@@ -39,9 +39,7 @@ export default {
 </script>
 
 <style lang="scss">
-footer {
 
-}
 .footer-main>*{
     flex: 1;
 }
