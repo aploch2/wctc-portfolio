@@ -20,10 +20,10 @@ const routes = [
       import("../views/SelfHostedProjectManager.vue"),
   },
   {
-    path: "/portfolio/magic-tree-house-books",
-    name: "Magic Tree House Books",
+    path: "/portfolio/the-etynre-foundation",
+    name: "The Etnyre Foundation",
     component: () =>
-      import("../views/MagicTreeHouse.vue"),
+      import("../views/EtnyreFoundation.vue"),
   },
   {
     path: "/portfolio/2018-portfolio",

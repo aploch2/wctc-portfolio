@@ -8,7 +8,7 @@
             <h2>
                     {{ title }}
             </h2>
-            <p>2020</p>
+            <p>{{ year }}</p>
         </div>
     </div>
 </router-link>
@@ -75,7 +75,8 @@ export default {
             padding: 0px;
         }
         h2 {
-            width: 80%;            
+            width: 80%;
+            font-size: 1.25em;
         }
         p {
             text-align: right;
