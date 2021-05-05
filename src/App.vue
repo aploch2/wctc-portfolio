@@ -24,11 +24,14 @@ export default {
 
 :root {
   // colors
-  --black: #000;
+  --black: rgb(15, 15, 15);
   --white: #fff;
   --gray: rgb(190, 190, 190);
+  --dark-gray: rgb(15, 15, 15);
+  --darkGray: rgb(75, 75, 75);
   --red: rgb(125, 0, 0);
   --body-text-color: var(--white);
+  --body-text-color-dark: var(--black);
   --heading-text-color: var(--white);
 
   --VueJS: #42b883;
@@ -46,9 +49,15 @@ export default {
   -moz-osx-font-smoothing: grayscale;
 }
 
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
 body {
   margin: 0px; // fixes initial body margin
-  background-color: rgb(15, 15, 15);
+  background-color: var(--black);
 }
 
 #app {
@@ -95,19 +104,24 @@ body {
     }
 }
 .button {
+    @include hover-button(var(--white), var(--gray), var(--black));
+}
+.button-dark {
+    @include hover-button-dark(var(--black), var(--darkGray), var(--white));
+}
+.button-light {
     text-decoration: none;
-    color: var(--black);
+    color: var(--white);
     padding: 0.5em 1em;
-    background-color: var(--white);
+    background-color: transparent;
     border: 2px solid var(--white);
     border-radius: 2px;
     transition: 0.2s ease-in-out;
 
     &:hover {
-        background-color: transparent;
-        color: var(--white);
+        background-color: var(--white);
+        color: var(--black);
         transition: 0.2s ease-in-out;
     }
 }
-
 </style>

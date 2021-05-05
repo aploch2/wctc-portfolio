@@ -34,7 +34,7 @@ export default {
 
 <style lang="scss" scoped>
 .project-link {
-    width: 20%;
+    width: 30%;
     margin: 1em;
     padding: 1.5em;
     background: rgba(255, 255, 255, 0.1);

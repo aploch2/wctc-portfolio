@@ -7,6 +7,7 @@
 
 @mixin wrapper {
     width: 80%;
+    max-width: 1920px;
     margin: 0 auto;
 
     @media screen and (max-width: 500px) {
@@ -37,6 +38,96 @@ position: relative;
 }
 }
 
+@mixin hover-button($bg-color, $hover, $text) {
+  text-decoration: none;
+  display: inline-block;
+  padding: .5em 1em;
+  border-radius: 0.15em;
+  color: $text;
+  // text-transform: uppercase;
+  // font-size: 1rem;
+  // letter-spacing: .15rem;
+  transition: all .3s;
+  position: relative;
+  overflow: hidden;
+  z-index: 1;
+
+  &:after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: $bg-color;
+    border-radius: 0.15em;
+    z-index: -2;
+  }
+  
+  &:before {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 0%;
+    height: 100%;
+    background-color: $hover;
+    transition: all .3s;
+    border-radius: 0.15em;
+    z-index: -1;
+  }
+  &:hover {
+    color: $text;
+    &:before {
+      width: 100%;
+    }
+  }
+}
+@mixin hover-button-dark($bg-color, $hover, $text) {
+  text-decoration: none;
+  display: inline-block;
+  padding: .5em 1em;
+  border-radius: 0.15em;
+  color: $text;
+  // text-transform: uppercase;
+  // font-size: 1rem;
+  // letter-spacing: .15rem;
+  transition: all .3s;
+  position: relative;
+  overflow: hidden;
+  z-index: 1;
+
+  &:after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: $bg-color;
+    border-radius: 0.15em;
+    z-index: -2;
+  }
+  
+  &:before {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 0%;
+    height: 100%;
+    background-color: $hover;
+    transition: all .3s;
+    border-radius: 0.15em;
+    z-index: -1;
+  }
+  &:hover {
+    color: $text;
+    &:before {
+      width: 100%;
+    }
+  }
+}
 // WIP effect
 @mixin hover-highlight {
     &:after{
