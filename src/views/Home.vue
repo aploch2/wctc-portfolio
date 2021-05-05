@@ -11,7 +11,7 @@
         </div>
       </div>
       <div class="austin-photo">
-        <img src="https://austinploch.com/images/austin-ploch.jpg" alt="Photo of Austin Ploch. ">
+        <img src="https://austinploch.com/images/austin-ploch-dark.jpg" alt="Photo of Austin Ploch. ">
         <!-- <div class="bg-square"></div> -->
       </div>
     </header>
@@ -21,9 +21,26 @@
         <article class="about-text">
           <h2>// About Me</h2>
           <p>
-            I am a Front End Web Developer and Web Designer based out of south-east Wisconsin. 
+            I am a Front End Web Developer and Web Designer based out of south-east Wisconsin. I build bespoke websites to assist your personal and business needs.
           </p>
-          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eligendi voluptates ea modi perferendis optio dolore eaque, molestias quia neque at maiores quae nobis quibusdam deleniti ipsum sint tenetur officia voluptas expedita itaque quod nostrum! Quod, minima quos repudiandae eligendi in odit quibusdam nam unde. Debitis dolorum quasi consequatur exercitationem deleniti odio! Corporis aut laudantium modi, et beatae debitis reiciendis eum ullam tempora nam perspiciatis autem eaque atque, ea sed. Necessitatibus fugit eveniet omnis, qui perspiciatis quae, suscipit explicabo eligendi quis cum doloremque quas deserunt, neque praesentium id autem rerum beatae maxime debitis magni eos blanditiis. Numquam, unde ipsum? Inventore, nesciunt.</p>
+          <p>Some of my specialties include:
+            <a href="https://wordpress.org" class="link-highlight" target="_blank">WordPress</a>, 
+            <a href="https://vuejs.org" class="link-highlight" target="_blank">VueJS</a>, 
+            <a href="https://sass-lang.com/" class="link-highlight" target="_blank">SCSS</a>, 
+            <a href="https://www.mongodb.com/" class="link-highlight" target="_blank">MongoDB</a>, 
+            <a href="https://www.mysql.com/" class="link-highlight" target="_blank">MySQL</a>, and 
+            <a href="https://www.docker.com/" class="link-highlight" target="_blank">Docker</a>.
+          </p>
+          <!-- <ul>
+            <li><a href="https://wordpress.org" class="link-highlight">WordPress</a></li>
+            <li><a href="" class="link-highlight">VueJS</a></li>
+            <li><a href="" class="link-highlight">SCSS</a></li>
+            <li><a href="" class="link-highlight">MongoDB</a></li>
+            <li><a href="" class="link-highlight">MySQL</a></li>
+            <li><a href="" class="link-highlight">Docker</a></li>
+          </ul> -->
+          <p>I studied and received my Associate's Degree at Waukesha County Technical College in 2021. I began learning web design back in 2012, in my junior year of high school. It started as just a fun course to take to fill the schedule. Shortly after, I realized I really enjoyed learning HTML and CSS. I would go home after school every day and learn on my own. It wasn't long until I was spending most of my free time trying to learn more.</p>
+          <p>After the semester ended, I pretty much dropped web design and went back to what I wanted to study in college, graphic design. I didn't do anything with web design until a year and a half later when I applied to the Art Institute of Minneapolis and my advisor suggested I study web design instead of graphic design. A year later, I moved home and started studying at WCTC.</p>
         </article>
         <aside class="about-resume">
           <!-- <ul>
@@ -125,7 +142,7 @@ export default {
         // width: 100%;
         max-width: 500px;
         height: auto;
-        // border-radius: 10%;
+        border-radius: 50%;
         outline: 10px solid var(--dark-gray);
         // z-index: 5;
         // position: relative;
@@ -182,6 +199,21 @@ export default {
         width: 70%;
         padding: 0 2em 0 0;
         position: relative;
+
+        p {
+          margin-bottom: 0.75em;
+        }
+        ul {
+          display: flex;
+          flex-direction: column;
+          // justify-content: flex-start;
+          align-items: flex-start;
+          margin-bottom: 0.75em;
+
+          li {
+            display: inline-block;
+          }
+        }
 
       }
       .about-resume {

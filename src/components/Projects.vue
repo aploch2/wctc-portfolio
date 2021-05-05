@@ -88,8 +88,9 @@ export default {
         justify-content: center;
         flex-wrap: wrap;
         position: relative;
+        // opacity: 0;
         animation-name: page-load-fade-in;
-        animation-duration: 1.0s;
+        animation-duration: 1.5s;
         animation-delay: 0s;
         animation-timing-function: ease-in-out;
 

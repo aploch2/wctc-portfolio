@@ -1,7 +1,7 @@
 <template>
   <div class="portfolio">
     <header>
-      <span class="title-span">// <h1>Portfolio</h1></span>
+      <span class="title-span">// <h1>My Works</h1></span>
     </header>
     <main>
       <Projects/>

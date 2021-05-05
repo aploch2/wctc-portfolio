@@ -1,6 +1,7 @@
 <template>
 <router-link :to="link" class="project-link">
     <div class="project">
+        <!-- <p class="project-year">{{ year }}</p> -->
         <div class="project-image-container">
             <img class="project-image" :src="image" :alt="imageAlt">            
         </div>
@@ -8,7 +9,6 @@
             <h2>
                     {{ title }}
             </h2>
-            <p>{{ year }}</p>
         </div>
     </div>
 </router-link>
@@ -36,6 +36,7 @@ export default {
 .project-link {
     width: 30%;
     margin: 1em;
+    // margin-bottom: 1em;
     padding: 1.5em;
     background: rgba(255, 255, 255, 0.1);
     border-radius: 3px;
@@ -52,6 +53,18 @@ export default {
 
 }
 .project {
+    position: relative;
+
+    .project-year {
+        position: absolute;
+        top: -2em;
+        left: -2em;
+        z-index: 2;
+        background: var(--red);
+        display: inline-block;
+        padding: 0.5em 1em;
+        border-radius: 2px;
+    }
     .project-image-container {
         width: auto;
         height: 15em;
@@ -65,9 +78,10 @@ export default {
     }
     .project-info {
         display: flex;
-        justify-content: space-between;
+        justify-content: center;
         align-items: center;
         padding: 1em 0;
+        padding-bottom: 0px;
 
         h2, p {
             display: inline-block;
@@ -75,8 +89,9 @@ export default {
             padding: 0px;
         }
         h2 {
-            width: 80%;
-            font-size: 1.25em;
+            // width: 80%;
+            font-size: 1em;
+            text-align: center;
         }
         p {
             text-align: right;

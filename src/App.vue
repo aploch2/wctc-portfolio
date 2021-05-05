@@ -30,6 +30,7 @@ export default {
   --dark-gray: rgb(15, 15, 15);
   --darkGray: rgb(75, 75, 75);
   --red: rgb(125, 0, 0);
+  --redLight: rgba(125, 0, 0, 0.15);
   --body-text-color: var(--white);
   --body-text-color-dark: var(--black);
   --heading-text-color: var(--white);
@@ -123,5 +124,8 @@ body {
         color: var(--black);
         transition: 0.2s ease-in-out;
     }
+}
+.link-highlight {
+  @include link-highlight;
 }
 </style>
