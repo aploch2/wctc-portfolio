@@ -11,10 +11,12 @@
                 <img src="@/assets/logo.png" alt="Austin Ploch's logo. ">
             </div>
             <div class="right">
-                <h3>// Contact Me</h3>
-                <div class="button-container">
-                <a href="mailto:austin@austinploch.com" class="icon-button"><font-awesome-icon :icon="['fas', 'envelope']" /></a>
-                <a href="https://www.linkedin.com/in/austin-ploch/" class="icon-button" target="_blank"><font-awesome-icon :icon="[ 'fab', 'linkedin' ]" /></a>
+                <div class="footer-right-container">
+                    <h3>// Contact Me</h3>
+                    <div class="button-container">
+                    <a href="mailto:austin@austinploch.com" class="icon-button"><font-awesome-icon :icon="['fas', 'envelope']" /></a>
+                    <a href="https://www.linkedin.com/in/austin-ploch/" class="icon-button" target="_blank"><font-awesome-icon :icon="[ 'fab', 'linkedin' ]" /></a>
+                    </div>
                 </div>
             </div>
         </div>
@@ -38,6 +40,10 @@ export default {
 
 <style lang="scss">
 footer {
+
+}
+.footer-main>*{
+    flex: 1;
 }
 .footer-main {
     @include wrapper;
@@ -58,7 +64,6 @@ footer {
     .left .links {
         display: flex;
         flex-direction: column;
-        align-items: flex-start;
         // align-items: start;
 
         a {
@@ -67,10 +72,14 @@ footer {
 
             @include link-underline;
         }
+        p {
+            margin-bottom: 1em;
+        }
     }
     .left {
+        align-items: flex-start;
+
         a {
-            margin-bottom: 1em;
             padding-bottom: 0.5em;
 
             &:last-child {
@@ -85,6 +94,13 @@ footer {
         }
     }
     .right {
+        align-items: flex-end;
+
+        .footer-right-container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
         h3 {
             @include heading-text(1.25);
             margin-bottom: 1em;

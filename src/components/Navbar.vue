@@ -1,14 +1,15 @@
 <template>
   <nav>
       <span>
-      <router-link to="/">home</router-link>
+      <router-link to="/" class="nav-left">home</router-link>
       <!-- <router-link to="/">About</router-link> -->
       </span>
-      <img src="../assets/logo.png" alt="Austin Ploch's logo. ">
+      <img src="../assets/logo.png" alt="Austin Ploch's logo. " class="nav-center">
       <span>
-      <router-link to="/portfolio">portfolio</router-link>
+      <router-link to="/portfolio" class="nav-right">portfolio</router-link>
       <!-- <router-link to="Portfolio">Contact</router-link> -->
       </span>
+      <font-awesome-icon :icon="[ 'fas', 'bars' ]" class="nav-menu" />
   </nav>
 </template>
 
@@ -66,11 +67,51 @@ nav {
     img {
         max-width: 200px;
     }
+    .nav-left {
+        position: relative;
+        animation-name: page-load-slide-in-top;
+        animation-duration: 1s;
+        animation-delay: 0s;
+        animation-timing-function: ease-in-out;
+
+    }
+    .nav-center {
+        position: relative;
+        animation-name: page-load-slide-in-top;
+        animation-duration: 1s;
+        animation-delay: 0s;
+        animation-timing-function: ease-in-out;
+
+    }
+    .nav-right {
+        position: relative;
+        animation-name: page-load-slide-in-top;
+        animation-duration: 1s;
+        animation-delay: 0s;
+        animation-timing-function: ease-in-out;
+
+
+    }
+    .nav-menu {
+        display: none;
+    }
 }
 nav>* {
   flex: 1;
-  display: flex;
-  align-items: center;
-  justify-content: space-around;
+//   display: flex;
+//   align-items: center;
+//   justify-content: space-around;
+}
+
+
+@media only screen and (max-width: 750px) {
+    .nav-menu {
+        display: inline-block;
+        font-size: 1.5em;
+
+        &:hover {
+            color: var(--red);
+        }
+    }
 }
 </style>

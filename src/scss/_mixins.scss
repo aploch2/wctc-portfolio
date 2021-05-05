@@ -146,3 +146,28 @@ position: relative;
           height: calc(100% + 8px)
       }
 }
+
+
+// Animations 
+
+@keyframes page-load-slide-in-left {
+  0% {left: -1000px;}
+  100% {left: 0px;}
+}
+
+@keyframes page-load-slide-in-right {
+    0% {right: -1000px;}
+  100% {right: 0px;}
+
+}
+
+@keyframes page-load-slide-in-top {
+    0% {top: -1000px;}
+  100% {top: 0px;}
+
+}
+
+@keyframes page-load-fade-in {
+  0% {opacity: 0;}
+  100% {opacity: 100;}
+}

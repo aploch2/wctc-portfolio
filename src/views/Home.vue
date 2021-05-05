@@ -32,7 +32,7 @@
             </li>
           </ul> -->
           <h3>// Want More Details?</h3>
-          <p>Check out my resume below.</p>
+          <p>Check out my résumé below.</p>
           <a class="button-dark" href="https://austinploch.com/files/Ploch_Résumé.pdf" download><font-awesome-icon :icon="[ 'fas', 'file-pdf' ]" /> Download Résumé</a>
         </aside>
       </section>
@@ -78,6 +78,11 @@ export default {
 
     .basic-about {
       width: 60%;
+      position: relative;
+      animation-name: page-load-slide-in-left;
+      animation-duration: 1s;
+      animation-delay: 0s;
+      animation-timing-function: ease-in-out;
 
       p:first-child {
         margin: 0px;
@@ -106,6 +111,12 @@ export default {
       width: 40%;
       padding: 0 2em;
       position: relative;
+      position: relative;
+      animation-name: page-load-slide-in-right;
+      animation-duration: 1s;
+      animation-delay: 0s;
+      animation-timing-function: ease-in-out;
+
 
       img {
         // width: 100%;
@@ -137,10 +148,17 @@ export default {
       @include wrapper;
       display: flex;
       justify-content: center;
+      animation-name: page-load-fade-in;
+      animation-duration: 1s;
+      animation-delay: 0s;
+      animation-timing-function: ease-in-out;
+
 
       .about-text {
         width: 70%;
         padding: 0 2em 0 0;
+        position: relative;
+
       }
       .about-resume {
         width: 30%;
