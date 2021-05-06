@@ -50,5 +50,11 @@ export default {
   main {
     padding: 50px 0;
   }
+  @media screen and (max-width: 800px) {
+    h1 {
+      text-align: center;
+    }
+  }
+
 }
 </style>

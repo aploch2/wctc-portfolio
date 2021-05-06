@@ -173,6 +173,10 @@ export default {
         .basic-about {
           width: 90%;
 
+          h1, h2, p {
+            text-align: center;
+          }
+
           .button-group {
             display: flex;
             flex-direction: column;

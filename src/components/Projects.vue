@@ -94,5 +94,11 @@ export default {
         animation-delay: 0s;
         animation-timing-function: ease-in-out;
 
+        @media screen and (max-width: 800px) {
+            flex-direction: column;
+        }
+        @media screen and (min-width: 800px) and (max-width: 1500px) {
+            flex-direction: row;
+        }
     }
 </style>

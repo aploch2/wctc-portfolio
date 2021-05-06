@@ -90,6 +90,29 @@ export default {
     .project-page-year {
         @include heading-text(1.25);
     }
+    @media screen and (max-width: 1275px) {
+        flex-direction: column;
+        padding: 50px 0;
+
+        .left, .right {
+            width: 100%;
+        }
+        .left {
+            margin-bottom: 3em;
+        }
+        .right {
+            .project-body-header {
+                text-align: center;
+            }
+            .sub-heading {
+                a {
+                    text-align: center;
+                    margin: 0 auto;
+                    width: auto;
+                }
+            }
+        }
+    }
 }
 .project-page-image {
     // width: 100vw;

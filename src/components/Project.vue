@@ -50,7 +50,12 @@ export default {
         // color: var(--red);
         transition: 0.2s ease-in-out;
     }
-
+    @media screen and (max-width: 800px) {
+        width: 90%;
+    }
+    @media screen and (min-width: 800px) and (max-width: 1500px) {
+        width: 40%;
+    }
 }
 .project {
     position: relative;
