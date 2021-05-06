@@ -1,18 +1,26 @@
-v-<template>
-    <div>
-        <img :src="image" :alt="imageAlt" class="project-image">
-        <p class="mid-light-heading">Technologies Used:</p>
-        <div class="tech">
-            <span v-for="item in tech" :key="item.name" :class="item">{{ item }}</span>
+<template>
+    <div class="project-page">
+        <div class="left">
+            <img :src="image" :alt="imageAlt" class="project-image">
+            <div class="tech-container">
+                <p class="mid-light-heading">Technologies Used:</p>
+                <div class="tech">
+                    <span v-for="item in tech" :key="item.name" :class="item">{{ item }}</span>
+                </div>
+            </div>
         </div>
+        <div class="right">
         <div class="project-body">
             <div class="project-body-header">
                 <h1>{{ title }}</h1>
+                <p>{{ year }}</p>
+            </div>
+            <div class="sub-heading">
+                
                 <a class="project-link" :href="link" target="_blank">Project Link</a>
             </div>
-        <!-- <p>The Project ID is: {{ id }}</p> -->
-            <p>{{ year }}</p>
             <p>{{ description }}</p>
+        </div>
         </div>
     </div>
 </template>
@@ -36,33 +44,57 @@ export default {
 }
 </script>
 
-<style lang="scss" scoped>
+<style lang="scss">
+.project-page {
+    @include wrapper;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 10em 0;
+
+    .left {
+        width: 50%;
+
+        img {
+            width: 100%;
+        }
+    }
+    .right {
+        width: 50%;
+
+        .sub-heading {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 2em;
+
+            .tech-container {
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+
+            }
+        }
+    }
+}
 .project-image {
-    width: 100vw;
+    // width: 100vw;
+    margin-bottom: 2em;
+
 }
 .project-body {
     @include wrapper;
 
+    .project-link {
+        @include hover-button(var(--white), var(--gray), var(--black));
+    }
     .project-body-header {
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
+        // display: flex;
+        // justify-content: space-between;
+        // align-items: center;
+        margin-bottom: 2em;
 
-        .project-link {
-            text-decoration: none;
-            color: var(--black);
-            padding: 0.5em 1em;
-            background-color: var(--white);
-            border: 2px solid var(--white);
-            border-radius: 2px;
-            transition: 0.2s ease-in-out;
-
-            &:hover {
-                background-color: transparent;
-                color: var(--white);
-                transition: 0.2s ease-in-out;
-            }
-        }
     }
 }
 .mid-light-heading {
@@ -71,4 +103,40 @@ export default {
     // font-size: 0.8em;
     margin-bottom: 0px;
 }
+.tech {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 1em;
+    // margin-bottom: 50px;
+
+    span {
+        display: inline-block;
+        padding: 0.5em 1em;
+        border: 2px solid var(--white);
+        border-radius: 2px;
+        margin-right: 1em;
+
+        &:last-child {
+            margin-right: 0px;
+        }
+    }
+    .VueJS {
+      color: var(--VueJS);
+      border-color: var(--VueJS);
+    }
+    .Docker {
+      color: var(--Docker);
+      border-color: var(--Docker);
+    }
+    .MongoDB {
+      color: var(--MongoDB);
+      border-color: var(--MongoDB);
+    }
+    .WordPress {
+      color: var(--WordPress);
+      border-color: var(--WordPress);
+    }
+}
+
 </style>

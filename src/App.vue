@@ -69,41 +69,6 @@ body {
   padding: 0px;
 }
 
-.tech {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin-top: 1em;
-    margin-bottom: 50px;
-
-    span {
-        display: inline-block;
-        padding: 0.5em 1em;
-        border: 2px solid var(--white);
-        border-radius: 2px;
-        margin-right: 1em;
-
-        &:last-child {
-            margin-right: 0px;
-        }
-    }
-    .VueJS {
-      color: var(--VueJS);
-      border-color: var(--VueJS);
-    }
-    .Docker {
-      color: var(--Docker);
-      border-color: var(--Docker);
-    }
-    .MongoDB {
-      color: var(--MongoDB);
-      border-color: var(--MongoDB);
-    }
-    .WordPress {
-      color: var(--WordPress);
-      border-color: var(--WordPress);
-    }
-}
 .button {
     @include hover-button(var(--white), var(--gray), var(--black));
 }

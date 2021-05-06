@@ -20,7 +20,7 @@ const routes = [
       import("../views/projects/SelfHostedProjectManager.vue"),
   },
   {
-    path: "/portfolio/the-etynre-foundation",
+    path: "/portfolio/the-etnyre-foundation",
     name: "The Etnyre Foundation",
     component: () =>
       import("../views/projects/EtnyreFoundation.vue"),
