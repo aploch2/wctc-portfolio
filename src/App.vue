@@ -39,6 +39,7 @@ export default {
   --MongoDB: #4db33d;
   --Docker: #0db7ed;
   --WordPress: #0073aa;
+  --Sass: #c69;
 
   // fonts
   --heading-text: 'Roboto Mono', sans-serif;

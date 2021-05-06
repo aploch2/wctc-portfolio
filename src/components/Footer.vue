@@ -120,6 +120,16 @@ export default {
             }
         }
     }
+    @media screen and (max-width: 500px) {
+        flex-direction: column;
+
+        .left {
+            display: none;
+        }
+        .middle {
+            margin-bottom: 2em;
+        }
+    }
 }
 .footer-copyright {
     background: var(--white);

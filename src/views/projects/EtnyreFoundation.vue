@@ -30,7 +30,7 @@ export default {
                 'image': 'https://austinploch.com/images/the-etnyre-foundation.jpg',
                 'imageAlt': 'Image for The Etnyre Foundation. ',
                 'link': 'https://theetnyrefoundation.org',
-                'tech': ['WordPress'],
+                'tech': ['WordPress', 'Sass'],
                 'description': 'The Etnyre Foundation is a foundation set up by Etnyre. Etnyre manufactures a wide range of equipment that serves the asphalt roadbuilding industry. They are located in Oregon, Illinois and wanted to give back to the town in a meaningful way. The Etnyre Foundation website serves as a place where people who wish to receive grants can apply for one or learn about the foundation.',
             }
         }

@@ -1,7 +1,7 @@
 <template>
     <div class="project-page">
         <div class="left">
-            <img :src="image" :alt="imageAlt" class="project-image">
+            <img :src="image" :alt="imageAlt" class="project-page-image">
             <div class="tech-container">
                 <p class="mid-light-heading">Technologies Used:</p>
                 <div class="tech">
@@ -13,7 +13,7 @@
         <div class="project-body">
             <div class="project-body-header">
                 <h1>{{ title }}</h1>
-                <p>{{ year }}</p>
+                <p class="project-page-year">{{ year }}</p>
             </div>
             <div class="sub-heading">
                 
@@ -49,11 +49,16 @@ export default {
     @include wrapper;
     display: flex;
     justify-content: center;
-    align-items: center;
+    align-items: flex-start;
     padding: 10em 0;
 
     .left {
         width: 50%;
+        position: relative;
+        animation-name: page-load-slide-in-left;
+        animation-duration: 1.5s;
+        animation-delay: 0s;
+        animation-timing-function: ease-in-out;
 
         img {
             width: 100%;
@@ -61,6 +66,11 @@ export default {
     }
     .right {
         width: 50%;
+        position: relative;
+        animation-name: page-load-slide-in-right;
+        animation-duration: 1.5s;
+        animation-delay: 0s;
+        animation-timing-function: ease-in-out;
 
         .sub-heading {
             display: flex;
@@ -77,8 +87,11 @@ export default {
             }
         }
     }
+    .project-page-year {
+        @include heading-text(1.25);
+    }
 }
-.project-image {
+.project-page-image {
     // width: 100vw;
     margin-bottom: 2em;
 
@@ -136,6 +149,10 @@ export default {
     .WordPress {
       color: var(--WordPress);
       border-color: var(--WordPress);
+    }
+    .Sass {
+      color: var(--Sass);
+      border-color: var(--Sass);
     }
 }
 

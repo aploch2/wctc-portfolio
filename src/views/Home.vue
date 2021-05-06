@@ -140,7 +140,7 @@ export default {
 
       img {
         // width: 100%;
-        max-width: 500px;
+        max-width: 100%;
         height: auto;
         // border-radius: 50%;
         outline: 10px solid var(--dark-gray);
@@ -156,9 +156,18 @@ export default {
         right: -25px;
         z-index: -1;
       }
+
+      @media screen and (max-width: 800px) {
+        width: 100%;
+        margin-top: 2em;
+
+        img {
+          width: 100%;
+        }
+      }
     }
 
-    @media screen and (max-width: 500px) {
+    @media screen and (max-width: 800px) {
         flex-direction: column;
         
         .basic-about {
@@ -231,6 +240,17 @@ export default {
         }
         p {
           margin-bottom: 1em;
+        }
+      }
+      @media screen and (max-width: 800px) {
+        flex-direction: column;
+
+        .about-text, .about-resume {
+          width: 100%;
+        }
+        .about-text {
+          padding-right: 0;
+          margin-bottom: 2em;
         }
       }
     }
