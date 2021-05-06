@@ -53,6 +53,7 @@ nav {
         position: fixed;
         left: 0;
         top: 0;
+        transition: 0.5s;
 
         .nav {
             // display: none;
@@ -120,6 +121,13 @@ nav {
     }
 }
 .menu-close {
+    transition: 0.2s ease-in-out;
+
+    &:hover {
+        cursor: pointer;
+        color: var(--red);
+        transition: 0.2s ease-in-out;
+    }
     @media screen and (min-width: 801px) {
         display: none;
     }
