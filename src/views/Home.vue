@@ -11,7 +11,7 @@
         </div>
       </div>
       <div class="austin-photo">
-        <img src="https://austinploch.com/images/austin-ploch-dark.jpg" alt="Photo of Austin Ploch. ">
+        <img src="https://austinploch.com/images/austin-ploch-tall-dark.jpg" alt="Photo of Austin Ploch. ">
         <!-- <div class="bg-square"></div> -->
       </div>
     </header>
@@ -142,7 +142,7 @@ export default {
         // width: 100%;
         max-width: 500px;
         height: auto;
-        border-radius: 50%;
+        // border-radius: 50%;
         outline: 10px solid var(--dark-gray);
         // z-index: 5;
         // position: relative;
