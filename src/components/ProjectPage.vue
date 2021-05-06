@@ -17,7 +17,7 @@
             </div>
             <div class="sub-heading">
                 
-                <a class="project-link" :href="link" target="_blank">Project Link</a>
+                <a class="project-link" :href="link" target="_blank"><font-awesome-icon :icon="[ 'fas', 'eye' ]" /> View Project</a>
             </div>
             <p>{{ description }}</p>
         </div>
