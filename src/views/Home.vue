@@ -6,8 +6,8 @@
         <h1>Austin Ploch.</h1>
         <h2>Front-End Developer / Web Designer</h2>
         <div class="button-group">
-          <router-link class="button" to="/portfolio">View My Portfolio <font-awesome-icon :icon="['fas', 'chevron-right']" /></router-link>
-          <a href="mailto:austin@austinploch.com" class="button">Get In Touch <font-awesome-icon :icon="['fas', 'envelope']" /></a>
+          <router-link class="button" to="/portfolio"><font-awesome-icon :icon="['fas', 'code']" /> View My Portfolio</router-link>
+          <a href="mailto:austin@austinploch.com" class="button"><font-awesome-icon :icon="['fas', 'envelope']" /> Get In Touch</a>
         </div>
       </div>
       <div class="austin-photo">
@@ -21,7 +21,7 @@
         <article class="about-text">
           <h2>// About Me</h2>
           <p>
-            I am a Front End Web Developer and Web Designer based out of south-east Wisconsin. I build bespoke websites to assist your personal and business needs.
+            I am a Front-End Web Developer and Web Designer based out of south-eastern Wisconsin. I build bespoke websites to assist your personal and business needs.
           </p>
           <p>Some of my specialties include:
             <a href="https://wordpress.org" class="link-highlight" target="_blank">WordPress</a>, 
