@@ -28,12 +28,19 @@ export default {
     },
     methods: {
 
+        
         openMenu() {
-            document.getElementById("nav").style.width = "100%";
+            let w = document.documentElement.clientWidth || window.innerWidth;
+            if(w <= 800) {
+                document.getElementById("nav").style.width = "100%";
+            }
             console.log('open');
         },
         closeMenu() {
-            document.getElementById("nav").style.width = "0%";
+            let w = document.documentElement.clientWidth || window.innerWidth;
+            if(w <= 800) {
+                document.getElementById("nav").style.width = "0%";
+            }
             console.log('close');
         } 
     }
@@ -43,6 +50,8 @@ export default {
 <style lang="scss">
 // @import "@/scss/_mixins.scss";
 nav {
+    width: 100%;
+    
     @media screen and (max-width: 800px) {
         overflow: hidden;
         background-color: var(--black);
