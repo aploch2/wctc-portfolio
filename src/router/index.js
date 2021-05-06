@@ -17,31 +17,31 @@ const routes = [
     path: "/portfolio/self-hosted-project-manager",
     name: "Self Hosted Project Manager",
     component: () =>
-      import("../views/SelfHostedProjectManager.vue"),
+      import("../views/projects/SelfHostedProjectManager.vue"),
   },
   {
     path: "/portfolio/the-etynre-foundation",
     name: "The Etnyre Foundation",
     component: () =>
-      import("../views/EtnyreFoundation.vue"),
+      import("../views/projects/EtnyreFoundation.vue"),
   },
   {
     path: "/portfolio/2018-portfolio",
     name: "2018 Portfolio",
     component: () =>
-      import("../views/2018Portfolio.vue"),
+      import("../views/projects/2018Portfolio.vue"),
   },
   {
     path: "/portfolio/the-invention-group",
     name: "The Invention Group",
     component: () =>
-      import("../views/TheInventionGroup.vue"),
+      import("../views/projects/TheInventionGroup.vue"),
   },
   {
     path: "/portfolio/summerfield-church",
     name: "Summerfield United Methodist Church",
     component: () =>
-      import("../views/SummerfieldChurch.vue"),
+      import("../views/projects/SummerfieldChurch.vue"),
   },
   // {
   //   path: "/project/:id",
