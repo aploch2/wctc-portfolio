@@ -29,7 +29,7 @@ export default {
                 'year': '2021',
                 'image': 'https://austinploch.com/images/summerfield-church.jpg',
                 'imageAlt': 'Image for the Summerfield United Methodist Church home page. ',
-                'link': 'https://summerfieldchurch.org.dream.website',
+                'link': 'https://summerfieldchurch.org',
                 'tech': ['WordPress', 'Sass'],
                 'description': 'Summerfield United Methodist Church is a church is a Methodist church located in Milwaukee. They wanted a new and up-to-date website that would help them better connect with their members. The have a meal service that is very important, so the information about that is very prominent on the site. They also wanted better connection with social media that would allow them to more easily share recordings of their sermons due to the fact that they hold all sermons online during the pandemic. The site was built with a CMS and contains custom plugins that support the features they wanted on their site. For this project, I was part of a team that collectively built this site. I served as the project manager, business analyst, and copywriter.',
             }
